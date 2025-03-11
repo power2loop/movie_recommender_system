@@ -1,4 +1,5 @@
 similarity.pkl
+movie_dict.pkl
 *.pkl
 __pycache__/
 .venv/
