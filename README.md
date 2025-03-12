@@ -19,3 +19,26 @@ Flask
 Scikit-learn
 Pandas
 NumPy
+
+🚀 How to Run-------------------------
+    1. Clone this repository:
+    git clone https://github.com/your-username/movie-recommender.git
+    cd movie-recommender
+    
+    2. Install dependencies:
+    pip install -r requirements.txt
+    
+    3. Run the app:
+    python app.py
+
+3️⃣ Save and Push Changes
+If Editing Locally:
+git add README.md
+git commit -m "Updated README with project details and dataset link"
+git push origin main
+If Editing on GitHub:
+1.Open README.md in your repo.
+2.Click Edit (pencil icon).
+3.Add the content.
+4.Click Commit changes.
+
