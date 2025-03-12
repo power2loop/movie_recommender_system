@@ -62,7 +62,7 @@ def get_base64(file_path):
         return None  # Handle missing image case
 
 # Set background image
-bg_image = get_base64("assets/b3.jpg")
+bg_image = get_base64("b3.jpg")
 if bg_image:
     st.markdown(
         f"""
