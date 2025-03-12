@@ -12,8 +12,8 @@ def download_file_from_google_drive(file_id, output_path):
     gdown.download(url, output_path, quiet=False)
 
 # Google Drive file IDs
-MOVIE_DICT_FILE_ID = "https://drive.google.com/file/d/1Ate4IZw4m4LdsxB7d_rPKbgGIho39ZVm/view?usp=drive_link"
-SIMILARITY_FILE_ID = "https://drive.google.com/file/d/1MR77X4pML-XqWf80v3qzCiHQXh9LiQOs/view?usp=drive_link"
+MOVIE_DICT_FILE_ID = "1Ate4IZw4m4LdsxB7d_rPKbgGIho39ZVm"
+SIMILARITY_FILE_ID = "1MR77X4pML-XqWf80v3qzCiHQXh9LiQOs"
 
 # Download files if they don't exist locally
 if not os.path.exists("movie_dict.pkl"):
