@@ -1,37 +1,31 @@
-# movie_recommender_system
+# 🎬 Movie Recommender System
 
-1️⃣ Open README.md Locally
-If you have VS Code, Notepad++, or any text editor, open README.md.
-Or, you can edit it in the GitHub repository itself.
-
-2️⃣ Add the Following Content
-📌 Movie Recommender System
-This is a Movie Recommender System built using Python, Pandas, and Scikit-learn.
+This is a **Movie Recommender System** built using **Python, Pandas, and Scikit-learn**.  
 It recommends movies based on similarity scores computed from the dataset.
 
-📊 Dataset Used
-We use the TMDb 5000 Movies Dataset available at:
-🔗 TMDb 5000 Movies Dataset
+## 📊 Dataset Used
+We use the **TMDb 5000 Movies Dataset**, available at:  
+🔗 [TMDb 5000 Movies Dataset](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata)
 
-⚙️ Tech Stack
-Python
-Flask
-Scikit-learn
-Pandas
-NumPy
+## ⚙️ Tech Stack
+- Python  
+- Flask  
+- Scikit-learn  
+- Pandas  
+- NumPy  
 
-🚀 How to Run-------------------------
-    1. Clone this repository:
-    git clone https://github.com/your-username/movie-recommender.git
-    cd movie-recommender
-    
-    2. Install dependencies:
-    pip install -r requirements.txt
-    
-    3. Run the app:
-    python app.py
+## 🚀 How to Run
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/your-username/movie-recommender.git
+   cd movie-recommender
 
-3️⃣ Save and Push Changes
+2.Install dependencies:
+pip install -r requirements.txt
+3.Run the app:
+python app.py
+
+🛠 Save and Push Changes
 If Editing Locally:
 git add README.md
 git commit -m "Updated README with project details and dataset link"
