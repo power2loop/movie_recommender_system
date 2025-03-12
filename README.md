@@ -21,10 +21,12 @@ We use the **TMDb 5000 Movies Dataset**, available at:
    cd movie-recommender
 
 2.Install dependencies:
+
 pip install -r requirements.txt
 
 
 3.Run the app:
+
 python app.py
 
 🛠 Save and Push Changes
