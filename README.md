@@ -16,25 +16,25 @@ We use the **TMDb 5000 Movies Dataset**, available at:
 
 ## 🚀 How to Run
 1. Clone this repository:
-   ```bash
+ ```bash
    git clone https://github.com/your-username/movie-recommender.git
    cd movie-recommender
 
 2.Install dependencies:
-```bash
-pip install -r requirements.txt
-
-
+ ```bash 
+  pip install -r requirements.txt 
+```
 3.Run the app:
-```bash
-python app.py
-
+  ```bash
+  python app.py
+```
 🛠 Save and Push Changes
+```base
 If Editing Locally:
 git add README.md
 git commit -m "Updated README with project details and dataset link"
 git push origin main
-
+```
 
 If Editing on GitHub:
 1.Open README.md in your repo.
