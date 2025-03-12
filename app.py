@@ -4,7 +4,7 @@ import pandas as pd
 import requests
 import base64
 import gdown  # For downloading from Google Drive
-import os
+import os  # Missing import added
 
 # Function to download large files from Google Drive
 def download_file_from_google_drive(file_id, output_path):
@@ -28,11 +28,18 @@ movies = pd.DataFrame(movies_dict)
 
 similarity = pickle.load(open('similarity.pkl', 'rb'))
 
+# Fetch movie poster from TMDB API
 def fetch_poster(movie_id):
     url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key=63ecda3b80f9c3f7819723dd06be9108&language=en-US"
     data = requests.get(url).json()
-    return f"https://image.tmdb.org/t/p/w500/{data['poster_path']}"
+    poster_path = data.get('poster_path', None)
+    
+    # Handle missing poster case
+    if poster_path:
+        return f"https://image.tmdb.org/t/p/w500/{poster_path}"
+    return "https://via.placeholder.com/500"  # Placeholder if no poster is available
 
+# Recommend movies
 def recommend(movie):
     movie_index = movies[movies['title'] == movie].index[0]
     distances = similarity[movie_index]
@@ -46,6 +53,13 @@ def recommend(movie):
         recommended_movies_posters.append(fetch_poster(movie_id))
     return recommended_movies, recommended_movies_posters
 
+# Function to encode image as Base64
+def get_base64(file_path):
+    try:
+        with open(file_path, "rb") as f:
+            return base64.b64encode(f.read()).decode()
+    except FileNotFoundError:
+        return None  # Handle missing image case
 
 # Set background image
 bg_image = get_base64("assets/b3.jpg")
@@ -63,27 +77,32 @@ if bg_image:
         unsafe_allow_html=True
     )
 
-
+# Streamlit UI
 st.title('Movie Recommender System')
 
+# Dropdown for selecting a movie
 selected_movie_name = st.selectbox('Select a movie:', movies['title'].values)
 
+# Button for recommendation
 if st.button('Recommend'):
     names, posters = recommend(selected_movie_name)
 
     col1, col2, col3, col4, col5 = st.columns(5)
-    with col1:
-        st.text(names[0])
-        st.image(posters[0])
-    with col2:
-        st.text(names[1])
-        st.image(posters[1])
-    with col3:
-        st.text(names[2])
-        st.image(posters[2])
-    with col4:
-        st.text(names[3])
-        st.image(posters[3])
-    with col5:
-        st.text(names[4])
-        st.image(posters[4])
+    if len(names) >= 5:
+        with col1:
+            st.text(names[0])
+            st.image(posters[0])
+        with col2:
+            st.text(names[1])
+            st.image(posters[1])
+        with col3:
+            st.text(names[2])
+            st.image(posters[2])
+        with col4:
+            st.text(names[3])
+            st.image(posters[3])
+        with col5:
+            st.text(names[4])
+            st.image(posters[4])
+    else:
+        st.warning("Not enough recommendations available.")
