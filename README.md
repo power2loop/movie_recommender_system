@@ -43,5 +43,6 @@ If Editing on GitHub:
 2.Click Edit (pencil icon).
 
 3.Add the content.
+
 4.Click Commit changes.
 
