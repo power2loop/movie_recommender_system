@@ -46,6 +46,24 @@ def recommend(movie):
         recommended_movies_posters.append(fetch_poster(movie_id))
     return recommended_movies, recommended_movies_posters
 
+
+# Set background image
+bg_image = get_base64("assets/b3.jpg")
+if bg_image:
+    st.markdown(
+        f"""
+        <style>
+            .stApp {{
+                background-image: url("data:image/jpg;base64,{bg_image}");
+                background-size: cover;
+                background-position: center;
+            }}
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+
 st.title('Movie Recommender System')
 
 selected_movie_name = st.selectbox('Select a movie:', movies['title'].values)
