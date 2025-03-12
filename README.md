@@ -19,7 +19,7 @@ We use the **TMDb 5000 Movies Dataset**, available at:
  ```bash
    git clone https://github.com/your-username/movie-recommender.git
    cd movie-recommender
-
+```
 2.Install dependencies:
  ```bash 
   pip install -r requirements.txt 
