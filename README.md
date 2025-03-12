@@ -37,8 +37,13 @@ git push origin main
 ```
 
 If Editing on GitHub:
+
 1.Open README.md in your repo.
+
 2.Click Edit (pencil icon).
+
 3.Add the content.
+
+
 4.Click Commit changes.
 
