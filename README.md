@@ -4,7 +4,7 @@ This is a **Movie Recommender System** built using **Python, Pandas, and Scikit-
 It recommends movies based on similarity scores computed from the dataset.
 
 ## 📊 Dataset Used
-We use the **TMDb 5000 Movies Dataset**, available at:  
+i have used the **TMDb 5000 Movies Dataset**, available at:  
 🔗 [TMDb 5000 Movies Dataset](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata)
 
 ## ⚙️ Tech Stack
