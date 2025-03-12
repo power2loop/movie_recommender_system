@@ -22,6 +22,8 @@ We use the **TMDb 5000 Movies Dataset**, available at:
 
 2.Install dependencies:
 pip install -r requirements.txt
+
+
 3.Run the app:
 python app.py
 
@@ -30,6 +32,8 @@ If Editing Locally:
 git add README.md
 git commit -m "Updated README with project details and dataset link"
 git push origin main
+
+
 If Editing on GitHub:
 1.Open README.md in your repo.
 2.Click Edit (pencil icon).
